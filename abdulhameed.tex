@@ -1,0 +1,85 @@
+\documentclass{report}
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Quran},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1, key2, key3}, % list of keywords
+    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\usepackage{forloop}
+\usepackage{quran}
+
+%%% For accessing system, OTF and TTF fonts
+%%% (would have been loaded by polylossia anyway)
+\usepackage{fontspec}
+
+%%% For language switching -- like babel, but for xelatex
+\usepackage{polyglossia}
+
+%%% For those cool-looking menus and keystrokes
+\usepackage{menukeys}
+
+%%% For the xelatex (and other LaTeX friends) logos
+\usepackage{hologo}
+
+%%% For the awesome fontawesome icons!
+\usepackage{fontawesome}
+
+%\usepackage[hyphens]{url}
+
+\date{}
+\setmainlanguage{malayalam}
+\setotherlanguages{arabic,english} %% or other languages
+
+
+
+%%% You'll probably want these lines if
+%%% you are also using tikz-related packages with
+%%% RTL languages. Put these lines *after* you 
+%%% loaded the RTL languages.
+\makeatletter
+    \let\pgfpicture\origin@pgfpicture%
+    \let\endpgfpicture\origin@endpgfpicture%
+\makeatother
+
+
+% Main serif font for English (Latin alphabet) text
+%\setmainfont[Ligatures=TeX]{TeX Gyre Termes}
+%\setsansfont{Lato}
+%\setmonofont{Inconsolata}
+
+% define fonts for other languages
+\newfontfamily\arabicfont[Script=Arabic,Scale=2]{Scheherazade}
+\newfontfamily\devanagarifont[Script=Devanagari]{Lohit Devanagari}
+\newfontfamily\greekfont[Script=Greek]{GFS Artemisia}
+\newfontfamily\thaifont[Script=Thai]{FreeSerif}
+\newfontfamily\malayalamfont[Script=Malayalam]{AnjaliOldLipi}
+
+
+
+
+\title{ഖുര്‍ആന്‍ ലളിതസാരം}
+\author{ശൈഖ് മുഹമ്മദ് കാരകുന്ന് \\ \&\\വാണിദാസ് എളയാവൂര് }
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\input{qu.tex}
+\end{document}
+             
